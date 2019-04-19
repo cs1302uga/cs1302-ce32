@@ -1,4 +1,4 @@
-package cs1302.analytics;
+package cs1302.ce32;
 
 import cs1302.myface.*;
 import cs1302.sorting.*;
