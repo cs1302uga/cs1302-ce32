@@ -14,6 +14,7 @@ public class MyFaceDriver {
      * The main entry point for the application.
      */
     public static void main(String[] args) {
+
         // generate myface users
         MyFace socialNetwork = new MyFace(25);
         MyFaceUser[] users = socialNetwork.getUsers().stream().toArray(MyFaceUser[]::new);
@@ -41,15 +42,15 @@ public class MyFaceDriver {
      */
     public static int countLargeWords(MyFaceUser user) {
         int count = 0;
-        
+
         //TODO: IMPLEMENT ME!
-        
+
         return count;
     } // countLargeWords
 
     /**
-     * Calculates the total runtime in seconds for an algorithm. Total runtime is calculated by 
-     * adding the total amount of time spent on comparisons and swaps. 
+     * Calculates the total runtime in seconds for an algorithm. Total runtime is calculated by
+     * adding the total amount of time spent on comparisons and swaps.
      *
      * @param sort a reference to the {@code Sort} object containing the statistics for each
      * operation.
@@ -61,5 +62,5 @@ public class MyFaceDriver {
         //convert to seconds and return the result
         return result / 1.0e9;
     } // getTotal
-    
+
 } // MyFaceDriver
