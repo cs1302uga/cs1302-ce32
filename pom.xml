@@ -5,12 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cs1302.analytics</groupId>
-  <artifactId>cs1302-ce30-ce31</artifactId>
+  <artifactId>cs1302-ce32</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>cs1302-ce30-ce31</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <name>cs1302-ce32</name>
+  <url>https://github.com/cs1302uga/cs1302-ce32</url>
 
   <repositories>
     <repository>
@@ -18,7 +17,7 @@
       <url>http://cs.uga.edu/~mec/cs1302-mvn-repo</url>
     </repository>
   </repositories>
-  
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
