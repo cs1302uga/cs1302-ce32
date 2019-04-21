@@ -31,7 +31,8 @@ command depends on your present working directory), then please note that contex
 ## Exercise Steps
 
 1. Open `MyFaceDriver.java`. Most of the code should look familiar from previous exercises.
-   Read through the main method and make sure you have a good idea of what it does.
+   Read through the `main` method and make sure you have a good idea of what it does.
+   You should also familiarize yourself with the other methods in the file.
 
 1. In `MyFaceDriver.java`, implement the method called `countLargeWords`
    **without using loops**. This method takes a `MyFaceUser` as an
