@@ -143,7 +143,7 @@ convenience.
       the abbreviated method parameters. The idea is that `[i]+(l,h,t)`
       represents the value of consuming `i` on turn `t-1` plus the
       maximum score for the remaining sweet tarts (which will likely
-      need to be further decomposed). To help get you started
+      need to be further decomposed). To help you get started,
       here is the beginning of the tree:
 
       ```
