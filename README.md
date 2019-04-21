@@ -50,16 +50,18 @@ command depends on your present working directory), then please note that contex
    Make your print statements clear so that you can easily check that your
    method is working.
 
-   **Note:** Each user has a random number of messages between `0` and the
-   social network size divided by `10`. That is [`0`, `50/10`].
+   **NOTES:**
 
-   **Warning:** You are reading people's messages. **We don't encourage this
-   behavior, in general.** I know it says we can do it in the
-   [EULA](https://en.wikipedia.org/wiki/End-user_license_agreement),
-   but we know that most MyFace users don't read that thing. Also, some of
-   the messages might be a bit odd (people write weird stuff sometimes) -- the
-   contents of the messages were populated from the
-   [Fortune Cookie Database](https://github.com/bmc/fortunes).
+   * Each user has a random number of messages between `0` and the
+     social network size divided by `10`. That is [`0`, `50/10`].
+
+   * You are reading people's messages. **We don't encourage this
+     behavior, in general.** I know it says we can do it in the
+     [EULA](https://en.wikipedia.org/wiki/End-user_license_agreement),
+     but we know that most MyFace users don't read that thing. Also, some of
+     the messages might be a bit odd (people write weird stuff sometimes) -- the
+     contents of the messages were populated from the
+     [Fortune Cookie Database](https://github.com/bmc/fortunes).
 
 1. Stage and commit your changes locally.
 
