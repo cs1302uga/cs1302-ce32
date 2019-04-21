@@ -169,14 +169,23 @@ convenience.
         the _remaining_ sweet tarts -- since `0` was consumed, this
         increases `l` from `0` to `1`.
 
+   1. Given your recursion tree, **how do you characterize the
+      base case(s)?**
+
+   1. Given your recursion tree, **how do you characterize the
+      recursive case(s)?**
+
 1. In `SweetTartsDriver.java`, implement the method called `score`
-   **without using loops.**
+   **without using loops.* Draw on the problem decomposition you
+   derived via your recursion tree to help you write the code.
 
    To test your code, here is the expected outpur for `sample2.txt`:
 
    ```
 
    ```
+
+1. Stage and commit your changes locally.
 
 **CHECKPOINT**
 
