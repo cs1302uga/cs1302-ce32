@@ -30,6 +30,10 @@ command depends on your present working directory), then please note that contex
 
 ## Exercise Steps
 
+For this first checkpoint, we encourage you to make use of the Java 8 Stream API
+instead of recursion when asked to implement an iterative process without using
+loops.
+
 1. Open `MyFaceDriver.java`. Most of the code should look familiar from previous exercises.
    Read through the `main` method and make sure you have a good idea of what it does.
    You should also familiarize yourself with the other methods in the file.
@@ -68,6 +72,11 @@ command depends on your present working directory), then please note that contex
 
 **CHECKPOINT**
 
+For this second checkpoint, we encourage you to make use of recursion instred of
+the Java 8 Stream API when asked to implement an iterative process without using
+loops.
+
+1.
 Problem B: Sweet Tarts
 Sweet Tarts are a hard candy similar to Life Savers. They come in a roll with n Sweet Tarts per roll
 and there are four flavors (A, B, C, and D). The package is clear so you can see the order of the flavors
