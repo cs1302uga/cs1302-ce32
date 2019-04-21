@@ -32,7 +32,8 @@ command depends on your present working directory), then please note that contex
 
 For this first checkpoint, we encourage you to make use of the Java 8 Stream API
 instead of recursion when asked to implement an iterative process without using
-loops.
+loops. The `MyFaceDriver` target is provided for you in the `Makefile` for your
+convenience.
 
 1. Open `MyFaceDriver.java`. Most of the code should look familiar from previous exercises.
    Read through the `main` method and make sure you have a good idea of what it does.
@@ -74,50 +75,111 @@ loops.
 
 For this second checkpoint, we encourage you to make use of recursion instred of
 the Java 8 Stream API when asked to implement an iterative process without using
-loops.
+loops. The `SweetTartsDriver` target is provided for you in the `Makefile` for your
+convenience.
 
-1.
-Problem B: Sweet Tarts
-Sweet Tarts are a hard candy similar to Life Savers. They come in a roll with n Sweet Tarts per roll
-and there are four flavors (A, B, C, and D). The package is clear so you can see the order of the flavors
-in the roll. You can only get a Sweet Tart from either end of the roll; no breaking open the package
-in the middle. Furthermore, you immediately eat a Sweet Tart once you remove it from the package.
-Now you have a definite preference for the flavors and like to save your favorites until the end. Being
-the computer science type, you’ve come up with a score for the order in which you eat the candies. You
-give each of the flavors a number from 1 through 4, depending on your preference (4 is most favored, 1
-is least). The score for eating a Sweet Tart is the product of its preference number with the position
-you ate it. For example if you ate a flavor B as the 5th Sweet Tart, and B had preference number 3,
-then it’s score would be 15.
-After you’ve eaten the entire roll, the score is the sum of all the individual Sweet Tarts eaten. Of course,
-you’d like to maximize the score. Given a particular roll of Sweet Tarts and the preference order of the
-four flavors, you’ll compute the maximum score of the roll. (Note there may be more than one way of
-realizing the score.)
-Input
-There will be multiple input sets. Each input set will have 3 lines. The first line will contain n (n ≤ 100),
-the number of Sweet Tarts in the roll. A value of n = 0 indicates there are no more input sets for this
-problem. The second line will contain a permutation of {A,B,C,D} indicating preference for the flavors
-(most favored to least). The third line will contain the n flavors as they appear in the roll, from left to
-right. Note that it may be that not all flavors will be used.
-Output
-Each input set should produce one line of output of the form:
-Case i has a maximum score of s.
-where i is the number of the input set (starting at 1) and s is the maximum score you determine.
-Sample Input
-4
-BCDA
-ABCD
-5
-BACD
-AAAAA
-6
-BCDA
-BACCCC
-0
-Sample Output
-Case 1 has a maximum score of 30.
-Case 2 has a maximum score of 45.
-Case 3 has a maximum score of ****.
+1. **Sweet Tarts** are a hard candy similar to Life Savers. They come in a roll
+   with `n` Sweet Tarts per roll and there are four flavors (`A`, `B`, `C`, and
+   `D`). The package is clear so you can see the order of the flavors in the roll.
+   **You can only get a Sweet Tart from either end of the roll**; no breaking
+   open the package in the middle. Furthermore, you are compelled to immediately
+   eat a Sweet Tart once you remove it from the package.
+
+   It's not surprising that you have a definite preference for the flavors and
+   like to save your favorites until the end. Being the computer science type,
+   you’ve come up with a score for the order in which you eat the candies. You
+   give each of the flavors a number from `1` through `4`, depending on your
+   preference (`4` is most favored, `1` is least). The score for eating a Sweet
+   Tart is the product of its preference number with the turn you ate it. For
+   example if you eat flavor `B` as the fifth Sweet Tart, and `B` has a
+   preference number of `3`, then its score would be `15`.
+
+   After you've eaten the entire roll, the overall score is the sum of all the
+   individual Sweet Tart scores. **Of course, you’d like to maximize the
+   score.** Given a particular roll of Sweet Tarts and the preference order of
+   the four flavors, you’ll compute the maximum score of the roll -- there may
+   be more than one way of realizing the score.
+
+1. Open `sample2.txt` in `src/main/resources`. This file describes zero or more
+   Sweet Tarts scenarios. Each non-empty scenario has the following format:
+
+   1. Line 1: Number of sweet tarts in package, say `n`.
+
+   1. Line 2: Flavor preference from low to high (always four)..
+
+   1. Line 3: The ordering for the `n`-many sweet tarts.
+
+   The last scenario is always empty (i.e., `n = 0`).
+
+   **How many non-empty scenarios are described in this file?**
+
+1. Open `SweetTartsDriver.java`. Read through the `main` method and make sure
+   you have a good idea of what it does. You should also familiarize yourself
+   with the other methods in the file.
+
+1. In `SweetTartsDriver.java`, inspect the method called `score`.
+   The initial call to this method is in `main` -- you may assume
+   valid initial input.
+
+   1. Before you can write the code, you need to understand how to decompose
+      the problem recursively. Attempt to draw the recursion tree for the
+	  following small example scenario:
+
+	  ```
+	  5
+	  ABCD
+	  CAADB
+	  ```
+
+	  The initial call is:
+
+	  ```java
+	  score(value, 0, 4, 1)
+	  ```
+
+	  You may find it easier to abbreviate this as `(0,4,1)` -- subsequent
+	  recursive calls can be abbreviated similarly `[i]+(l,ht)` where
+	  `i` denotes the sweet tart to consume and `l`, `h`, and `t` are
+	  the abbreviated method parameters. The idea is that `[i]+(l,h,t)`
+	  represents the value of consuming `i` on turn `t-1` plus the
+	  maximum score for the remaining sweet tarts (which will likely
+	  need to be further decomposed). To help get you started
+	  here is the beginning of the tree:
+
+      ```
+              (0,4,1)
+	             |
+                max
+			   /   \
+			  /     \
+             /       \
+            /         \
+	  [4]+(0,3,2) [0]+(1,4,2)
+	  ```
+
+	  In the example provided,
+
+	  * `[4]+(0,3,2)` represents consuming
+	    sweet tart value `4` on turn `1` plus the maximum score for
+	    the _remaining_ sweet tarts -- since `4` was consumed, this
+	    decreases `h` from `4` to `3`; and
+
+	  * `[0]+(1,4,2)` represents consuming
+	    sweet tart value `0` on turn `1` plus the maximum score for
+		the _remaining_ sweet tarts -- since `0` was consumed, this
+		increases `l` from `0` to `1`.
+
+1. In `SweetTartsDriver.java`, implement the method called `score`
+   **without using loops.**
+
+   To test your code, here is the expected outpur for `sample2.txt`:
+
+   ```
+
+   ```
+
 **CHECKPOINT**
+
 <hr/>
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)

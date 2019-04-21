@@ -48,14 +48,14 @@ public class SweetTartsDriver {
             readPref(pref, input);
             readValues(numCandies, values, pref, input);
             printState(numCandies, values);
-            System.out.printf("Max Value: %s\n", max(values, 0, values.length - 1, 1));
+            System.out.printf("Max Value: %s\n", score(values, 0, values.length - 1, 1));
             numCandies = input.nextInt();
         } // while
 
     } // main
 
     /**
-     * Returns the maximum value of eating a roll of sweet tarts (values)
+     * Returns the maximum score of eating a roll of sweet tarts (values)
      * starting at position {@code lo} and ending at position {@code hi}.
      * The consumer is only allowed to eat from the ends of the roll. The value
      * for eating a particular candy is the value of that candy multiplied
@@ -66,10 +66,10 @@ public class SweetTartsDriver {
      * @param hi the ending index in the array.
      * @param turn the current turn.
      */
-    private static int max(int[] values, int lo, int hi, int turn) {
+    private static int score(int[] values, int lo, int hi, int turn) {
         // TODO: Implement me!
         return 0;
-    } // max
+    } // score
 
     /**
      * Print the current state of the game. Output includes
