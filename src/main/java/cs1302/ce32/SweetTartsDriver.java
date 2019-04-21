@@ -8,28 +8,32 @@ import java.io.InputStream;
 /**
  * A sweet program that calculates the maximum overall enjoyment
  * for eating rolls of Sweet Tarts given a preference for each color
- * and a roll of candies. Input data is read from an input file. There
- * can be multiple test cases per file. Each test begins with the number
- * of candies in the roll. The next line of the file contains a {@code String}
+ * and a roll of candies.
+ *
+ * <p>
+ * Input data is read from an input file. There can be multiple test
+ * cases per file. Each test begins with the number of candies in the
+ * roll. The next line of the file contains a {@code String}
  * representing the preferences for each color. The first character in
  * the preferences {@code String} is the most preferred candy (character)
  * and the last character is the least preferred. The final line of the
  * test case is the candy roll itself which is represented as a {@code String}
  * where each character represents a candy.
  */
-public class SweetTarts {
-    
+public class SweetTartsDriver {
+
     private static final String INPUT_FILE = "sample2.txt";
 
     /**
      * The entry point for the application.
      */
     public static void main(String[] args) {
+
         char[] pref = new char[4];
         int numCandies;
         Scanner input = null;
         int[] values;
-        
+
         try {
             input = loadFileScanner(INPUT_FILE);
         } catch(FileNotFoundException e) {
@@ -37,17 +41,17 @@ public class SweetTarts {
         } // try
 
         numCandies = input.nextInt();
-        
-        while(numCandies != 0) {          // The terminal value 
-            values = new int[numCandies];    
+
+        while(numCandies != 0) {          // The terminal value
+            values = new int[numCandies];
             input.nextLine();             // consume '\n' after number of candies
             readPref(pref, input);
             readValues(numCandies, values, pref, input);
             printState(numCandies, values);
-
             System.out.printf("Max Value: %s\n", max(values, 0, values.length - 1, 1));
             numCandies = input.nextInt();
         } // while
+
     } // main
 
     /**
@@ -66,7 +70,7 @@ public class SweetTarts {
         // TODO: Implement me!
         return 0;
     } // max
-            
+
     /**
      * Print the current state of the game. Output includes
      * the number of candies in the current iteration and the
@@ -91,13 +95,11 @@ public class SweetTarts {
      * @param numCandies the number of candy values to read.
      * @param values the array in which to store the values.
      * @param input the {@code Scanner} object containing the data.
-     */ 
+     */
     private static void readValues(int numCandies, int[] values, char[] pref, Scanner input) {
         String candies = input.nextLine();
-
-        for(int i = 0; i < numCandies; i++) {
+        for (int i = 0; i < numCandies; i++) {
             char candy = candies.charAt(i);
-            
             values[i] = candyToValue(candy, pref);
         } // for
     } // readValues
@@ -105,13 +107,13 @@ public class SweetTarts {
     /**
      * Converts a character (candy) to its value based on the preferences.
      * The most preferred candy will have a value of 4 and the least preferred
-     * candy will have a value of 1. 
+     * candy will have a value of 1.
      *
      * @param candy the character (candy) value to convert.
      * @param pref the array of candy preferences.
      */
     private static int candyToValue(char candy, char[] pref) {
-        int value = 4; // First value is worth the most. 
+        int value = 4; // First value is worth the most.
         for(int i = 0; i < pref.length; i++) {
             if(pref[i] == candy) {
                 value -= i; // Subtract location from the max value
@@ -144,5 +146,5 @@ public class SweetTarts {
         Scanner sc = new Scanner(is);
         return sc;
     } // loadFileScanner
-    
-} // SweetTarts
+
+} // SweetTartsDriver
