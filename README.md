@@ -176,7 +176,7 @@ convenience.
       recursive case(s)?**
 
 1. In `SweetTartsDriver.java`, implement the method called `score`
-   **without using loops.* Draw on the problem decomposition you
+   **without using loops.** Draw on the problem decomposition you
    derived via your recursion tree to help you write the code.
 
    To test your code, here is the expected outpur for `sample2.txt`:
