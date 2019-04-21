@@ -1,4 +1,4 @@
-# cs1302-ce10000 Streams / Recursion Practice
+# cs1302-ce10000_2 Streams / Recursion Practice
 
 In this class exercise, students will further explore the use of the Java Stream API and
 recursion.
