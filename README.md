@@ -189,6 +189,30 @@ convenience.
 
 **CHECKPOINT**
 
+1. **[TRICKY]** Write a non-recursive, non-stream method to compute the
+   overall maximum score for a sweet tarts problem **using a single
+   two-dimensional array** of size `n`-by-`n` in addition to the `values`
+   array of length `n = values.length`.
+
+   1. Implement the method.
+
+   1. Provide clear code that demonstrates that it works.
+
+1. Stage and commit your changes locally.
+
+**CHECKPOINT**
+
+1. **[HARD]** Write a non-recursive, non-stream method to compute the
+   overall maximum score for a sweet tarts problem **using a single
+   one-dimensional array** of length `n` in addition to the `values` array
+   of length `n = values.length`.
+
+   1. Implement the method.
+
+   1. Provide clear code that demonstrates that it works.
+
+1. Stage and commit your changes locally.
+
 <hr/>
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
