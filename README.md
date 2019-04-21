@@ -10,11 +10,11 @@ recursion.
 
 ## Questions
 
-In your notes, clearly answer the following questions. These instructions assume that you are 
-logged into the Nike server. 
+In your notes, clearly answer the following questions. These instructions assume that you are
+logged into the Nike server.
 
-**NOTE:** If a step requires you to enter in a command, please provide in your notes the full 
-command that you typed to make the related action happen. If context is necessary (e.g., the 
+**NOTE:** If a step requires you to enter in a command, please provide in your notes the full
+command that you typed to make the related action happen. If context is necessary (e.g., the
 command depends on your present working directory), then please note that context as well.
 
 ### Getting Started
@@ -30,32 +30,41 @@ command depends on your present working directory), then please note that contex
 
 ## Exercise Steps
 
-1. Open the file named `MyFaceDriver.java`. Most of the code contained in the file should look
-   familiar from our exercises last week. Read through the main method and make sure you
-   have a good idea of what it does.
-   
-1. In `MyFaceDriver.java`, implement the method called `countLargeWords` *without using loops*.
-   This method takes a `MyFaceUser` as an argument and returns the total number of words with
-   `5` or more characters across all of their messages. You may need to reference the
+1. Open `MyFaceDriver.java`. Most of the code should look familiar from previous exercises.
+   Read through the main method and make sure you have a good idea of what it does.
+
+1. In `MyFaceDriver.java`, implement the method called `countLargeWords`
+   **without using loops**. This method takes a `MyFaceUser` as an
+   argument and returns the total number of words with  `5` or more
+   characters across all of their messages. You may need to reference the
    [MyFace Message API](http://cobweb.cs.uga.edu/~mec/cs1302-mvn-site/cs1302-myface/apidocs/index.html).
-   
-   To make sure your method is working properly, print the contents of all messages for each
-   user along with the total count of large words across all messages. Again, *no loops*.
-   However, feel free to write this code in a method instead of directly in main. Make your print
-   statements clear so that you can easily check that your method is working.
-   **Note:** Each user has a random number of messages between `0` and the social network
-   size divided by 10. That is [`0`, `25/10`]. 
-   
-   **Warning:** You are reading people's messages. **We don't encourage this behavior, in general.** 
-   I know it says we can do it in the [EULA](https://en.wikipedia.org/wiki/End-user_license_agreement),
-   but we know that most MyFace users don't read that thing. Also, some of the messages might be a bit 
-   odd (people write weird stuff sometimes) -- the contents of the messages were populated from the 
+
+1. In `main`, use the array returned by `sort.getSorted()` to ensure that
+   your `countLargeWords` method is working properly. For each user in the
+   array, you should print the following **without using loops**:
+
+   * the contents of all messages owned by the user; and
+   * the count of large words.
+
+   Feel free to write this code in a method instead of directly in `main`.
+   Make your print statements clear so that you can easily check that your
+   method is working.
+
+   **Note:** Each user has a random number of messages between `0` and the
+   social network size divided by `10`. That is [`0`, `50/10`].
+
+   **Warning:** You are reading people's messages. **We don't encourage this
+   behavior, in general.** I know it says we can do it in the
+   [EULA](https://en.wikipedia.org/wiki/End-user_license_agreement),
+   but we know that most MyFace users don't read that thing. Also, some of
+   the messages might be a bit odd (people write weird stuff sometimes) -- the
+   contents of the messages were populated from the
    [Fortune Cookie Database](https://github.com/bmc/fortunes).
-   
-   1. Stage and commit your changes locally.
+
+1. Stage and commit your changes locally.
 
 **CHECKPOINT**
-    
+
 Problem B: Sweet Tarts
 Sweet Tarts are a hard candy similar to Life Savers. They come in a roll with n Sweet Tarts per roll
 and there are four flavors (A, B, C, and D). The package is clear so you can see the order of the flavors
@@ -95,7 +104,7 @@ BACCCC
 Sample Output
 Case 1 has a maximum score of 30.
 Case 2 has a maximum score of 45.
-Case 3 has a maximum score of ****.    
+Case 3 has a maximum score of ****.
 **CHECKPOINT**
 <hr/>
 
