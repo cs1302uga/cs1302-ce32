@@ -139,9 +139,9 @@ convenience.
 
       You may find it easier to abbreviate this as `(0,4,1)` -- subsequent
       recursive calls can be abbreviated similarly `[i]+(l,ht)` where
-      `i` denotes the sweet tart to consume and `l`, `h`, and `t` are
+      `i` denotes the sweet tart index to consume and `l`, `h`, and `t` are
       the abbreviated method parameters. The idea is that `[i]+(l,h,t)`
-      represents the value of consuming `i` on turn `t-1` plus the
+      represents the value of consuming index `i` on turn `t-1` plus the
       maximum score for the remaining sweet tarts (which will likely
       need to be further decomposed). To help you get started,
       here is the beginning of the tree:
@@ -159,14 +159,14 @@ convenience.
 
       In the example provided,
 
-      * `[4]+(0,3,2)` represents consuming
-        sweet tart value `4` on turn `1` plus the maximum score for
-        the _remaining_ sweet tarts -- since `4` was consumed, this
+      * `[4]+(0,3,2)` represents consuming the
+        sweet tart value at index `4` on turn `1` plus the maximum score for
+        the _remaining_ sweet tarts -- since index `4` was consumed, this
         decreases `h` from `4` to `3`; and
 
-      * `[0]+(1,4,2)` represents consuming
-        sweet tart value `0` on turn `1` plus the maximum score for
-        the _remaining_ sweet tarts -- since `0` was consumed, this
+      * `[0]+(1,4,2)` represents consuming the
+        sweet tart value at index `0` on turn `1` plus the maximum score for
+        the _remaining_ sweet tarts -- since index `0` was consumed, this
         increases `l` from `0` to `1`.
 
    1. Given your recursion tree, **how do you characterize the
