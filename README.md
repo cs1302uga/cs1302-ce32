@@ -5,8 +5,8 @@ recursion.
 
 ## References and Prerequisites
 
-* Stream Reading **ADD Link**
-* Recursion Reading **ADD Link**
+* Basic understanding of Java Streams
+* Basic understanding of recursion.
 
 ## Questions
 
