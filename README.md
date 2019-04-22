@@ -183,15 +183,14 @@ convenience.
 
    ```
    NumCandies: 14
-
    14321432143214
    Max Value: 279
-   NumCandies: 8
 
+   NumCandies: 8
    33333333
    Max Value: 108
+   
    NumCandies: 10
-
    4133333333
    Max Value: 162
    ```
