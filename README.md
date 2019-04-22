@@ -182,7 +182,7 @@ convenience.
    To test your code, here is the expected outpur for `sample2.txt`:
 
    ```
-NumCandies: 14
+   NumCandies: 14
 
    14321432143214
    Max Value: 279
