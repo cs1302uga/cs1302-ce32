@@ -43,7 +43,7 @@ convenience.
    **without using loops**. This method takes a `MyFaceUser` as an
    argument and returns the total number of words with  `5` or more
    characters across all of their messages. You may need to reference the
-   [MyFace Message API](http://cobweb.cs.uga.edu/~mec/cs1302-mvn-site/cs1302-myface/apidocs/index.html).
+   [MyFace Message API](http://csweb.cs.uga.edu/~mec/cs1302-mvn-site/cs1302-myface/apidocs/index.html).
 
 1. In `main`, use the array returned by `sort.getSorted()` to ensure that
    your `countLargeWords` method is working properly. For each user in the
