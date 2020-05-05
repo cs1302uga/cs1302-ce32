@@ -14,7 +14,7 @@
   <repositories>
     <repository>
       <id>cs1302-repo</id>
-      <url>http://cs.uga.edu/~mec/cs1302-mvn-repo</url>
+      <url>http://csweb.cs.uga.edu/~mec/cs1302-mvn-repo</url>
     </repository>
   </repositories>
 
